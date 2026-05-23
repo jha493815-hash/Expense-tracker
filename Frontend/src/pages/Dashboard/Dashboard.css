@@ -1,0 +1,64 @@
+/* Base Dashboard Root Layout Container */
+.dashboard {
+  display: flex;
+  background-color: #f8fafc; 
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Main Content Workspace Panel */
+.dashboard-content {
+  flex: 1;
+  /* Matches the exact width of your fixed sidebar to avoid overlapping text layouts */
+  margin-left: 260px; 
+  padding: 0 40px 40px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+  max-width: 1400px; 
+  width: calc(100% - 260px);
+}
+
+/* Layout structural constraint adjustments specifically for the main balance card view */
+.dashboard-content > .balance-card {
+  max-width: 100%;
+}
+
+/* Horizontal Multi-Chart Section Layout Grid */
+.charts-section {
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* AI Component Layout Wrapper Restraints */
+.dashboard-content > .ai-container,
+.dashboard-content > div:has(.loader-wrapper) {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive Fluid Breakdown View Overrides */
+ /* Stack layout down on vertical mobile interfaces */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Force charts into a clean uniform single column display */
+  .charts-section {
+    grid-template-columns: 1fr; 
+  }
+}

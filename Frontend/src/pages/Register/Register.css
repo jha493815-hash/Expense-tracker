@@ -1,0 +1,219 @@
+/* Full-viewport canvas centering background layout */
+.auth-viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f1f5f9; 
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Centralized floating interaction registration container card */
+.register-card-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px; 
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05),
+              0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
+}
+
+/* App Title Logo and Header Info Block */
+.register-brand {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.register-brand h2 {
+  color: #0f172a; 
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.03em;
+}
+
+.register-brand p {
+  color: #64748b; 
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- SYSTEM ALERTS AND NOTIFICATION BUBBLES --- */
+
+/* Warning alert container box bubble if database requests fail */
+.auth-error-bubble {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Success notification message capsule container */
+.auth-success-bubble {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- FORM INPUT CONTROL TIERS --- */
+
+/* Form block vertical input stacks layout */
+.auth-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; 
+}
+
+.auth-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field-group label {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Standard raw input box dimensions parameters */
+.auth-field-group input[type="text"],
+.auth-field-group input[type="email"],
+.auth-field-group input[type="number"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+}
+
+.auth-field-group input[type="text"]:focus,
+.auth-field-group input[type="email"]:focus,
+.auth-field-group input[type="number"]:focus {
+  border-color: #3b82f6; 
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Contextual structural alignment grid box for the hide/reveal password module */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding: 12px 46px 12px 16px; 
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+}
+
+.password-input-wrapper input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Absolute right-stacked alignment bounds for the eye visibility vector icon */
+.eye-icon {
+  position: absolute;
+  right: 16px;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  user-select: none;
+  transition: color 0.15s ease;
+}
+
+.eye-icon:hover {
+  color: #475569;
+}
+
+/* Standard default Blue primary submit action element */
+.btn-auth-submit {
+  width: 100%;
+  background-color: #3b82f6; 
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+  transition: background-color 0.15s ease-in-out;
+  margin-top: 6px;
+}
+
+.btn-auth-submit:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- FOOTER ROUTE TOGGLE LINK LINE --- */
+.register-footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+
+.register-footer span {
+  color: #64748b;
+}
+
+/* Strip native browser properties down to clean text hyperlinks */
+.inline-link-btn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.inline-link-btn:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}

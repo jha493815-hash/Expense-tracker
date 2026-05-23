@@ -1,0 +1,40 @@
+/* Container to help position and restrain the search element */
+.search-container {
+  width: 100%;
+  max-width: 400px; /* Keeps the search bar from stretching across the entire screen */
+  margin-bottom: 20px;
+  display: flex;
+}
+
+/* Highly visible and crisp input box styling */
+.search-input {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  color: #0f172a; /* Near-black text color for extreme legibility */
+  background-color: #ffffff; /* Explicit white background */
+  border: 1px solid #cbd5e1; /* Clear slate border outline */
+  border-radius: 8px; /* Clean, modern rounded corners */
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); /* Soft shadow layer */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Accessible and clean placeholder color text */
+.search-input::placeholder {
+  color: #94a3b8; /* Visible gray that doesn't look completely washed out */
+  opacity: 1; /* For cross-browser compatibility */
+}
+
+/* Interactive focused state when the user clicks inside */
+.search-input:focus {
+  border-color: #3b82f6; /* Pops into your dashboard's standard blue color */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 4px 12px rgba(0, 0, 0, 0.04); /* Clean accent glow ring */
+  background-color: #ffffff;
+}
+
+/* Hover state just to add subtle interactive feedback */
+.search-input:hover:not(:focus) {
+  border-color: #94a3b8;
+}

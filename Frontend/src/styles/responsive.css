@@ -1,0 +1,99 @@
+/* ==========================================================================
+   1. TABLET BREAKPOINT (Max-width: 1024px)
+   For iPads, Tablets, and Small Laptops
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+  /* Collapse the 2-column page layouts down to 1 column */
+  .dashboard, 
+  .transaction-page {
+    grid-template-columns: 80px 1fr; /* Shrink the sidebar to just show icons */
+  }
+
+  /* Shrink sidebar branding or hide long text strings */
+  .admin-sidebar h2 span,
+  .admin-nav a span.text {
+    display: none; 
+  }
+
+  /* Make charts grid stack or take full width on tablets */
+  .charts-section,
+  .charts-grid,
+  .planner-grid-layout,
+  .transaction-content {
+    grid-template-columns: 1fr !important; /* Forces components to stack neatly */
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   2. MOBILE BREAKPOINT (Max-width: 768px)
+   For iPhones, Android Devices, and Small Screens
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Completely restructure main page grids to ignore sidebars */
+  .dashboard, 
+  .transaction-page,
+  .admin-container {
+    grid-template-columns: 1fr !important; /* Remove sidebar channel layout entirely */
+  }
+
+  /* Hide the desktop sidebar on mobile, or push it out of view */
+  .admin-sidebar,
+  .dashboard > aside,
+  .transaction-page > sidebar,
+  aside {
+    display: none; /* In production, you would toggle this with a hamburger button menu */
+  }
+
+  /* Reduce heavy desktop padding down so elements don't get squished */
+  .dashboard-content,
+  .transaction-content,
+  .admin-main,
+  .reports-page {
+    padding: 20px 16px !important;
+    gap: 16px !important;
+  }
+
+  /* Balance Cards Layout / Onboarding Form Wrappers */
+  .dashboard-content > :nth-child(2) {
+    flex-direction: column; /* Cards stack vertically instead of sliding horizontally */
+    gap: 16px;
+  }
+
+  /* Stats row tracking displays inside Admin panel and dashboard views */
+  .admin-stats-grid {
+    grid-template-columns: 1fr !important; /* Stack stats blocks into single row arrays */
+    gap: 16px;
+  }
+
+  /* Data Tables Responsiveness (Database lists, transaction logs) */
+  .table-container {
+    overflow-x: auto; /* Adds a clean side-scroll to data tables so text won't truncate */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .users-table th, .users-table td,
+  .ledger-table th, .ledger-table td {
+    padding: 12px 8px !important;
+    font-size: 13px !important;
+  }
+
+  /* Modifying Action Grid Blocks layout mapping for input views */
+  .transaction-content {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Authentication view panels adjustment (Login / Registration layout boxes) */
+  .login-card-box,
+  .register-card-box,
+  .notfound-card {
+    padding: 30px 20px !important;
+    margin: 10px;
+    border-radius: 16px !important;
+  }
+
+  .login-brand h2, .register-brand h2 {
+    font-size: 24px !important;
+  }
+}

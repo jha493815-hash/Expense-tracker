@@ -1,0 +1,131 @@
+/* Container holding the form elements */
+.transaction-form {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header Text */
+.transaction-form h2 {
+  color: #1e293b; /* Deep slate charcoal */
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* Primary Amount Text Field Input */
+.transaction-form > input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a; /* Clear, near-black numeric value text */
+  background-color: #f8fafc; /* Subtle contrasting soft background */
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.transaction-form > input[type="number"]:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Category Quick Expense Grid Setup */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Quick Expense Grid Option Buttons */
+.category-grid button {
+  background-color: #ffffff;
+  color: #475569; /* Clear, visible gray text labels */
+  border: 1px solid #e2e8f0;
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.category-grid button:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+/* Toggle Custom Form Action Button */
+.custom-btn {
+  width: 100%;
+  background-color: transparent;
+  color: #3b82f6; /* Accent blue string link color */
+  border: 1px dashed #3b82f6; /* Dashed line signaling expandable content */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.custom-btn:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Expanded Custom Form Container */
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+/* Text Inputs inside the Custom Form */
+.custom-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.custom-form input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Add Expense Confirmation Button inside the drawer */
+.custom-form button[type="submit"] {
+  background-color: #10b981; /* High visibility safe success emerald green */
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-form button[type="submit"]:hover {
+  background-color: #059669; /* Darker green on hover focus */
+}

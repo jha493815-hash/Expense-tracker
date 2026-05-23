@@ -1,0 +1,58 @@
+/* Container holding each independent chart card */
+.chart-container {
+  background-color: #ffffff; /* Explicit stark white card background */
+  border: 1px solid #eef2f6; /* Subtle card border definition */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02); /* Delicate drop shadow to pop from dashboard background */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect to match the modern dashboard feel */
+.chart-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* Strong bold titles (Replaces vanished/invisible text) */
+.chart-title {
+  color: #1e293b; /* Deep slate charcoal for crisp visibility */
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+/* Subtext/Descriptions under title headers */
+.chart-subtext {
+  color: #64748b; /* Mid-tone slate gray for hierarchy */
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Customizing Recharts built-in Legend Text elements if they render inside your component */
+.recharts-legend-item-text {
+  color: #334155 !important; /* Forces dark gray legends for high accessibility */
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+}
+
+/* Recharts Tooltip styling adjustment for deep contrast */
+.recharts-default-tooltip {
+  background-color: #1e293b !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.recharts-tooltip-item {
+  color: #ffffff !important; /* White labels inside dark tooltip boxes */
+  font-size: 0.85rem !important;
+}

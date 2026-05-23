@@ -1,0 +1,167 @@
+/* Core viewport layout centering wrapper */
+.notfound-viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f1f5f9; 
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Floating interface container module */
+.notfound-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px; /* Aligns with login/register layout structures */
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05),
+              0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+  animation: cardPopIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Structural container grouping for the emoji badge */
+.notfound-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Circular soft-tint badge wrapper for the visual icon */
+.notfound-icon {
+  font-size: 2.2rem;
+  background-color: #fef3c7; 
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.1);
+  animation: pulseScale 2s infinite ease-in-out;
+}
+
+/* Screen identity warning heading text */
+.notfound-card h1 {
+  color: #0f172a; 
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+/* Context statement message copy paragraph */
+.notfound-message {
+  color: #64748b; 
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+/* Vertical stacking for route-switching push actions */
+.notfound-actions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+
+.btn-register-primary {
+  width: 100%;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  transition: background-color 0.15s ease;
+}
+
+.btn-register-primary:hover {
+  background-color: #1d4ed8; 
+}
+
+/* Secondary Action: Lower tier fallback navigation element */
+.btn-login-secondary {
+  width: 100%;
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-login-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+/* Footer help textual sub-grouping container link line */
+.notfound-footer {
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+
+.notfound-footer span {
+  color: #64748b;
+}
+
+/* Strip button parameters down to a sleek clean text hyperlink */
+.inline-link-btn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 2px 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.inline-link-btn:hover {
+  color: #1d4ed8;
+  text-decoration: underline; 
+}
+
+/* Micro-interaction animation structures */
+@keyframes cardPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}

@@ -1,0 +1,62 @@
+/* Base Page Flex Layout Engine */
+.transaction-page {
+  display: flex;
+  background-color: #f8fafc; 
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Main Content Column Stack Panel Workspace */
+.transaction-content {
+  flex: 1;
+  /* Matches the exact sidebar width used in Dashboard.css to keep view panels uniform */
+  margin-left: 260px;
+  padding: 0 40px 40px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1400px; 
+  width: calc(100% - 260px);
+}
+
+/* --- CHILD INNER HOOK STYLING OVERRIDES --- */
+
+/* Form Component Wrapper Inject Constraints */
+.transaction-content > form,
+.transaction-content > .transaction-form-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* List Component Wrapper Inject Constraints */
+.transaction-content > .transaction-list-container,
+.transaction-content > div:has(table) {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Adaptive Fluid Breakpoint Media Queries */
+@media (max-width: 900px) {
+  .transaction-page {
+    flex-direction: column; /* Stack sidebar and primary content vertical on mobile layouts */
+  }
+
+  .transaction-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+}
